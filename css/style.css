@@ -1816,6 +1816,10 @@ h1, h2, h3, h4, h5, p {
   color: #0b2653;
 }
 
+.title-newsletter {
+  color: #FFF;
+}
+
 .nav-icon{
   display: none;
 }
@@ -1941,7 +1945,10 @@ h1, h2, h3, h4, h5, p {
   .portfolio_filter{
     margin-top: 0;
     float: left;
-    margin-bottom: 30px;
+    margin-bottom: 30px;    
+  }
+
+  .portfolio_filter ul {
     display: flex;
     flex-direction: column;
   }
