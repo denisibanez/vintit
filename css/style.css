@@ -27,6 +27,10 @@
 
 
 /*------------------------ 1 Body and Core Css ------------------------*/   
+.icon-color {
+  color: #0b2653;
+}
+
 html, body {
   position: relative;
 }
