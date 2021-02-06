@@ -339,7 +339,11 @@ magnific();
 
 
 
-}); // document read end 
+});
+
+// document read end 
+
+
 
 
 

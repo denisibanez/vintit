@@ -32,7 +32,7 @@
 <div id="preloader">
     <div class="loading-area">
       <div class="logo"><img src="img/logo.png" alt=""></div>
-      <span>loading...</span>
+      <span>carregando...</span>
     </div>
     <div class="left-side"></div>
     <div class="right-side"></div>
@@ -102,9 +102,9 @@
   </div> <!-- Swiper Container end -->
   <!-- Social Links -->
   <div class="social">
-      <a href="https://www.linkedin.com/company/71262516"><i class="fab fa-linkedin"></i>  </a>
-      <a href="#"><i class="fab fa-facebook"></i>  </a>      
-      <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>      
+      <a href="https://www.linkedin.com/company/71262516" target="_blank"><i class="fab fa-linkedin"></i>  </a>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i>  </a>      
+      <a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>      
   </div>
 </div>
 
@@ -406,10 +406,13 @@
     </div>
     <p>Fique por dentro de tudo que rola no mercado de tecnologia e ainda receba notícias sobre a Vint.</p>
     <div class="col-lg-8 offset-lg-2">
-        <input class="emailput" placeholder="seu e-mail">
+        <input type="email" class="emailput" id="input_email" name="Email" placeholder="seu e-mail">
     </div>
+    <form method="post">
+      <input type="button" value="Send Email" onclick="sendEmail()"/>
+    </form>
     <button type="submit" value="SEND" class="site-btn top_30">Inscrever-se</button>
-  </div>
+  </div>  
 </section>
 
 <!-- CONTACT
@@ -431,7 +434,7 @@
             <!-- info -->
             <div class="info">
               <i class="fas  fa-paper-plane"></i>
-              <a href="#">denis@vintit.dev</a>
+              <a href="mailto:denis@vintit.dev">denis@vintit.dev</a>
               <p> Email </p>
             </div>
             <!-- info -->            
@@ -449,7 +452,7 @@
           <div class="col-12 col-md-4 contact-info box-animation d-flex align-items-center justify-content-center">
             <div class="info">
               <i class="fas fa-phone"></i>
-              <a href="https://api.whatsapp.com/send?phone=5511981898517">+55 (11)9 8149-8517</a>
+              <a href="https://api.whatsapp.com/send?phone=5511981898517" target="_blank">+55 (11)9 8149-8517</a>
               <p> Telefone </p>
             </div>
           </div>
@@ -495,15 +498,15 @@
       <!-- Social -->
       <div class="col-lg-4 ftr-social">
         <div class="social">
-            <a href="https://www.linkedin.com/company/71262516"><i class="fab fa-linkedin"></i>  </a>
-            <a href="#"><i class="fab fa-facebook"></i>  </a>            
-            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>            
+            <a href="https://www.linkedin.com/company/71262516" target="_blank"><i class="fab fa-linkedin"></i>  </a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i>  </a>            
+            <a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>            
         </div>
       </div>
       <!-- Get In Touch -->
       <div class="col-lg-4 getintouch">
         <h3 class="title">Fale conosco</h3>
-        <p>denis@vintit.dev</p>
+        <a class="contato" href="mailto:denis@vintit.dev">denis@vintit.dev</a>
       </div>
     </div>
   </div>
@@ -513,6 +516,8 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src = "index.js"> </script>  
 
 </body>
 
