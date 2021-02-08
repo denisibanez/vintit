@@ -1,7 +1,8 @@
 function sendEmail() {
 	Email.send({
-	Host: "SMTP.office365.com",
-	SecureToken : "a810e613-3a3d-41ca-bcff-748ba9501871",
+	Host: "smtp.gmail.com",
+	Username : "igor.vi471@gmail.com",
+	Password : "949206546igor",
 	To : 'igor.vi471@gmail.com',
 	From : "igor.vi471@gmail.com",
 	Subject : "<teste>",
