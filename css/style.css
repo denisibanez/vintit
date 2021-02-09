@@ -250,10 +250,11 @@ header.fixed{
 
 header .logo{
   float: left;
+  width: 200px;
 }
 
 header .logo img{
-  max-height: 30px;
+  max-width: 100%;
 }
 
 header nav{
@@ -263,6 +264,13 @@ header nav{
 header nav ul li{
   float: left;
   margin-left: 30px;
+  padding-top: 30px;
+}
+
+@media(max-width: 768px) {
+  header nav ul li{    
+    padding-top: 0;
+  }
 }
 
 
@@ -624,6 +632,7 @@ header nav ul li a:focus{
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all  ease 0.3s;
+  cursor: pointer;
 }
 
 .site-btn:hover{

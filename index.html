@@ -8,6 +8,8 @@
 <meta name="description" content="O nome VINT veio como referência sobre um dos criadores do protocolo TCP/IP (Vint Cerf), sem ele não seria possível que a internet como conhecemos existisse. A VINT nasceu com a missão de ajudar as pessoas por meio da tecnologia e de solucionar problemas com ideias inteligentes e práticas, nosso objetivo é ajudar a escalar o seu negócio e time de tecnologia, sendo a unidade de inteligência e desenvolvimento que sua empresa precisa.">
 <meta name="keywords" content="onepage, portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="img/favicon/favicon.ico">
   
     <!-- Stylesheets -->
     <link rel="stylesheet" href="font/stylesheet.css"/>
@@ -30,9 +32,9 @@
 
   <!-- PRELOADER -->
 <div id="preloader">
-    <div class="loading-area">
-      <div class="logo"><img src="img/logo.png" alt=""></div>
-      <span>carregando...</span>
+    <div class="loading-area d-flex justify-content-center text-center flex-column align-items-center">
+      <div class="logo d-flex justify-content-center text-center" style="width: 400px; height: 400px;"><img src="img/logo2.png" alt="" style="width: 100%; height: 100%;"></div>
+      <span style="margin-top: -130px;">carregando...</span>
     </div>
     <div class="left-side"></div>
     <div class="right-side"></div>
@@ -103,8 +105,8 @@
   <!-- Social Links -->
   <div class="social">
       <a href="https://www.linkedin.com/company/71262516" target="_blank"><i class="fab fa-linkedin"></i>  </a>
-      <a href="#" target="_blank"><i class="fab fa-facebook"></i>  </a>      
-      <a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>      
+      <a href="https://www.facebook.com/Vint-Desenvolvimento-e-Terceiriza%C3%A7%C3%A3o-567470590861808" target="_blank"><i class="fab fa-facebook"></i>  </a>      
+      <a href="https://www.instagram.com/vint_it.dev/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>      
   </div>
 </div>
 
@@ -409,9 +411,8 @@
         <input type="email" class="emailput" id="input_email" name="Email" placeholder="seu e-mail">
     </div>
     <form method="post">
-      <input type="button" value="Send Email" onclick="sendEmail()"/>
-    </form>
-    <button type="submit" value="SEND" class="site-btn top_30">Inscrever-se</button>
+      <input type="button" value="Inscrever-se" class="site-btn top_30" onclick="sendEmail()"/>
+    </form>    
   </div>  
 </section>
 
@@ -499,8 +500,8 @@
       <div class="col-lg-4 ftr-social">
         <div class="social">
             <a href="https://www.linkedin.com/company/71262516" target="_blank"><i class="fab fa-linkedin"></i>  </a>
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i>  </a>            
-            <a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>            
+            <a href="https://www.facebook.com/Vint-Desenvolvimento-e-Terceiriza%C3%A7%C3%A3o-567470590861808" target="_blank"><i class="fab fa-facebook"></i>  </a>            
+            <a href="https://www.instagram.com/vint_it.dev/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>            
         </div>
       </div>
       <!-- Get In Touch -->
@@ -520,17 +521,29 @@
 
 <script type="text/javascript">
   function sendEmail() {
-	Email.send({
-	Host: "smtp.gmail.com",
-	Username : "igor.vi471@gmail.com",
-	Password : "949206546igor",
-	To : 'igor.vi471@gmail.com',
-	From : "igor.vi471@gmail.com",
-	Subject : "teste",
-	Body : "email body",
-	}).then(
-		message => alert("e-mail enviado com sucesso")
-	);
+    const btn = document.getElementById('input_email').value
+    var data = {
+    service_id: 'service_t1evi9x',
+    template_id: 'template_980t1th',
+    user_id: 'user_56iJexaIX8e9kOEsQjpek',
+    template_params: {
+        'username': btn,
+        'message': btn,
+        'from_name': btn,        
+        'to_name': btn,        
+        'reply_to': btn,        
+    }
+};
+ 
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+}).done(function() {
+    alert('E-mail enviado com sucesso!');
+}).fail(function(error) {
+    alert('Oops... ' + JSON.stringify(error));
+});
 }
 </script>  
 
