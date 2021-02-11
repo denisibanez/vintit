@@ -874,6 +874,7 @@ section{
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
+  min-height: 275px;
 }
 
 .service:hover{
@@ -953,6 +954,13 @@ section{
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+  min-height: 340px;
+}
+
+@media(max-width: 768px) {
+  .testimonials .outitem{    
+    min-height: 365px;
+  }
 }
 
 .testimonials{
