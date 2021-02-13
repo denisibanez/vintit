@@ -1288,7 +1288,7 @@ content: '\f03e';
 .newsletter{
   position: relative;
   width: 100%;
-  background: url(../img/bg-image.jpg) center center no-repeat fixed;
+  background: url(../img/bg-image.webp) center center no-repeat fixed;
   background-size: cover;
 }
 
